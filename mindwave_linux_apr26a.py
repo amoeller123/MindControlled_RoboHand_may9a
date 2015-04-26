@@ -7,7 +7,7 @@ import sys
 time.sleep(15)
 
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-sock.bind(("20:68:9D:3F:54:10", 1))
+sock.bind(("00:00:00:00:00:00", 1))
 
 object1=NeuroPy("/dev/rfcomm0", 57600)
 ser = serial.Serial('/dev/ttyUSB0', 9600);
