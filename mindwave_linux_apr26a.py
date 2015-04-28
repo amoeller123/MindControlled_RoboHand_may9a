@@ -7,10 +7,10 @@ import sys
 time.sleep(5) #Timer for Bluetooth to become ready
 
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-sock.bind(("00:00:00:00:00:00", 1))
+sock.bind(("00:00:00:00:00:00", 1)) #Put Bluetooth MAC Address of MindWave here
 
 object1=NeuroPy("/dev/rfcomm0", 57600)
-ser = serial.Serial('/dev/ttyUSB0', 9600);
+ser = serial.Serial('/dev/ttyUSB0', 9600); #USB Serial port of Arduino
 
 def attention_callback(attention_value):
     print "Attention is",attention_value
