@@ -4,7 +4,7 @@ import time
 import serial
 import sys
 
-time.sleep(15)
+time.sleep(5) #Timer for Bluetooth to become ready
 
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 sock.bind(("00:00:00:00:00:00", 1))
