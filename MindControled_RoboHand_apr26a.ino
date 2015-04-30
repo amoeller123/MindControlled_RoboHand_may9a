@@ -49,6 +49,17 @@ void loop() {
           flag=true;
         }
         
+//Servos make a fist
+        if (serialData == 3) 
+        {         
+          myservo_thumb.write(180);
+          myservo_index.write(180);
+          myservo_middle.write(180);
+          myservo_ring.write(180);
+          myservo_pinkie.write(180);
+          flag=true;
+        }
+        
      if(flag)
         {
           delay(1000);
