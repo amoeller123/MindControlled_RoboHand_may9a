@@ -4,13 +4,13 @@ import time
 import serial
 import sys
 
-time.sleep(5)
+time.sleep(5) #Needed to work on startup to allow bluetooth drivers to become ready
 
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-sock.bind(("00:00:00:00:00:00", 1))
+sock.bind(("00:00:00:00:00:00", 1)) #Put MindWave MAC address here
 
-object1=NeuroPy("/dev/rfcomm0", 57600)
-ser = serial.Serial('/dev/ttyUSB0', 9600);
+object1=NeuroPy("/dev/rfcomm0", 57600) #Default RFCOMM location for MindWave
+ser = serial.Serial('/dev/ttyUSB0', 9600); #Default Arduino USB serial
 
 def attention_callback(attention_value):
     print "Attention is",attention_value
